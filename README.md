@@ -5,11 +5,11 @@ A Simple Local movies list assignment based on React, Redux, Redux-Saga, theMovi
 ### Requirement
 - Fetch theMovieDB API
 - Loading Notification
-- Sort by four different mode: by Title; by Vote_Count; by Average_Score; by Release_Date
+- Sort by four different mode: by **Title**; by **Vote_Count**; by **Average_Score**; by **Release_Date**
 - Pagination
-- Movie details in a modal layer
-- Mark a movie as "liked"
-- Mark a movie as "blocked" and not be shown in the main list
+- Movie details in a **modal layer**
+- Mark a movie as **"liked"**
+- Mark a movie as **"blocked"** and **NOT** be shown in the main list
 - Switch a movie's status as "liked" or "blocked"
 
 ### Install
