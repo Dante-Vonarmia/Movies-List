@@ -3,15 +3,15 @@
 A Simple Local movies list assignment based on React, Redux, Redux-Saga, theMovieDB API
 
 ### Requirement
-- [Complete]Fetch theMovieDB API
-- [Complete]Loading Notification
-- [Complete]Sort by four different mode: by **Title**; by **Vote_Count**; by **Average_Score**; by **Release_Date**
-- [Complete]Pagination
-- [Complete]Movie details in a **modal layer**
-- [Complete]Mark a movie as **"liked"**
-- [Complete]Mark a movie as **"blocked"** and **NOT** be shown in the main list
-- [Complete]Switch a movie's status as "liked" or "blocked"
-- [Undone]*No repetative data request*
+- [x] Fetch theMovieDB API
+- [x] Loading Notification
+- [x] Sort by four different mode: by **Title**; by **Vote_Count**; by **Average_Score**; by **Release_Date**
+- [x] Pagination
+- [x] Movie details in a **modal layer**
+- [ ] Mark a movie as **"liked"**
+- [ ] Mark a movie as **"blocked"** and **NOT** be shown in the main list
+- [ ] Switch a movie's status as "liked" or "blocked"
+- [ ] *No repetative data request*
 
 ### Install
 1) Fetch the repository.  
