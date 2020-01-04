@@ -15,13 +15,14 @@ A Simple Local movies list assignment based on React, Redux, Redux-Saga, theMovi
 ### Install
 1) Fetch the repository.  
 
-	git clone https://github.com/Dante-Vonarmia/Movies-List
+		git clone https://github.com/Dante-Vonarmia/Movies-List
+	
 
 2) Into the project folder.  
 
-	cd Movies-List
+		cd Movies-List
 
 3) Easy install and run.  
 
-	yarn install && yarn start
+		yarn install && yarn start
 
