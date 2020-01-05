@@ -16,6 +16,7 @@ function* requestMovies(apiMethod, args = []) {
 	}
 	
 	const { results, page, total_pages: pageCount } = response.data;
+	
 	yield put(actions.fetchMoviesSuccess(results));
 	yield put(actions.setPageCount(pageCount));
 	yield put(actions.currentPage(page));

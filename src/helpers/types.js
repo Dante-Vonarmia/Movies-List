@@ -15,8 +15,12 @@ export const BY_AVERAGESCORE             = 'BY_AVERAGESCORE';
 export const BY_RELEASEDATE              = 'BY_RELEASEDATE';
 export const BY_DEFAULT                  = 'BY_DEFAULT';
 
-// // Pagination types
+// Pagination types
 export const SET_PAGE_COUNT              = 'SET_PAGE_COUNT';
 export const CURRENT_PAGE                = 'CURRENT_PAGE';
 export const CHANGE_PAGE                 = 'CHANGE_PAGE';
-// export const RESET_PAGE_NUMBER        = 'RESET_PAGE_NUMBER';
+
+// Marked Item 
+export const MARK_LIKED                  = 'MARK_LIKED';
+export const MARK_BLOCKED                = 'MARK_BLOCKED';
+export const MARK_FETCH_MARKED           = 'MARK_FETCH_MARKED';

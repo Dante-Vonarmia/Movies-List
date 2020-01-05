@@ -22,14 +22,14 @@ const Portal = ({ children }) => {
 	return createPortal(children, modalRoot);
 };
 
-const formatCash = n => {
-	if (n < 1e3) return n;
-	if (n >= 1e3 && n < 1e6) return +(n / 1e3).toFixed(1) + 'K';
-	if (n >= 1e6 && n < 1e9) return +(n / 1e6).toFixed(1) + 'M';
-};
+// const formatCash = n => {
+// 	if (n < 1e3) return n;
+// 	if (n >= 1e3 && n < 1e6) return +(n / 1e3).toFixed(1) + 'K';
+// 	if (n >= 1e6 && n < 1e9) return +(n / 1e6).toFixed(1) + 'M';
+// };
 
 const MovieDetailsModal = React.memo(
-	({ movieGenres, details, loading, error, toggleModal, isModalOpen }) => {
+	({ details, loading, error, toggleModal, isModalOpen }) => {
 		return (
 			<Portal>
 				{isModalOpen && !loading && (
@@ -53,8 +53,8 @@ const MovieDetailsModal = React.memo(
 										<DesctiptionSection>
 											<DescriptionTitle>Budget / Worldwide Gross</DescriptionTitle>
 											<DesctiptionSubTitle>
-												{`${formatCash(details.budget)} /
-									${formatCash(details.revenue)}`}
+												{`${details.budget} /
+									${details.revenue}`}
 											</DesctiptionSubTitle>
 										</DesctiptionSection>
 									)}

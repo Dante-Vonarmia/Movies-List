@@ -6,8 +6,8 @@ const Movie = React.memo(({ id, poster_path, title, popularity, vote_count, over
 		'https://image.tmdb.org/t/p/w200/xPu5camdNW7ga5QeHGJhiMbQ62B.jpg';
 
 	return (
-		<div key={id} style={{textAlign: 'center'}} onClick={() => hangleOpenModal(id)}>
-			<img src={posterUrl} alt={title} />
+		<div key={id} style={{textAlign: 'center'}}>
+			<img src={posterUrl} alt={title} onClick={() => hangleOpenModal(id)} />
 			<p>Title: {title}</p>
 			<p>Popularity: {popularity}</p>
 			<p>Vote count: {vote_count}</p>

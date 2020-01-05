@@ -15,6 +15,8 @@ import {
 
 import Home from '../Home'
 import Movies from '../Movies'
+import Liked from '../Liked'
+import Blocked from '../Blocked'
 
 const routes = [
 	{
@@ -71,22 +73,5 @@ export default function sideBar() {
 				</main>
 			</div>
 		</Router>
-	);
-}
-
-
-function Liked() {
-	return (
-		<div>
-			<h2>Liked - Lists</h2>
-		</div>
-	);
-}
-
-function Blocked() {
-	return (
-		<div>
-			<h2>Blocked - Lists</h2>
-		</div>
 	);
 }

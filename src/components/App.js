@@ -6,16 +6,6 @@ import Layout from './Layout'
 
 const store = configureStore();
 
-// export class App extends React.Component {
-// 	render() {
-// 		return (
-// 			<Provider store={store}>
-// 				<Layout />
-// 			</Provider>
-// 		)
-// 	}
-// }
-
 const App = () => (
 	<Provider store={store}>
 		<Layout />

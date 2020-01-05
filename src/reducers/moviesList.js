@@ -1,7 +1,7 @@
 import * as types from '../helpers/types'
 
 const moviesInitialState = {
-	results  : [],
+	results : [],
 	loading : false,
 	error   : null,
 };
@@ -35,9 +35,9 @@ export const movies = (state = moviesInitialState, action) => {
 };
 
 const movieDetailsinitialState = {
-	details: {},
-	loading: false,
-	error: null,
+	details : {},
+	loading : false,
+	error   : null,
 };
 
 export const movieDetails = (state = movieDetailsinitialState, action) => {

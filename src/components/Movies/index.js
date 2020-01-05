@@ -3,6 +3,7 @@ import { bindActionCreators } from "redux"
 import { connect } from "react-redux"
 
 import { fetchDefaultMovies, fetchMovieDetails } from "../../actions/fetchMovies"
+import { markAsLiked, markAsBlocked } from "../../actions/markAs"
 
 import Sort from '../Sort'
 import Pagination from '../Pagination'
@@ -18,8 +19,11 @@ const Movies = props => {
 		movieDetailsError,
 		moviesloading,
 		fetchMovieDetails,
+		markAsLiked,
+		markAsBlocked,
+		blockedList
 	} = props;
-
+	
 	const [isModalOpen, toggleModal] = useState(false);
 
 	useEffect(() => {
@@ -33,6 +37,20 @@ const Movies = props => {
 		}, [fetchMovieDetails],
 	);
 
+	const handleMarkAsLiked = useCallback(
+		movie => {
+			markAsLiked(movie)
+		},
+		[markAsLiked],
+	)
+
+	const handleMarkAsBlocked = useCallback(
+		movie => {
+			markAsBlocked(movie)
+		},
+		[markAsBlocked],
+	)
+
 	return !moviesloading ? (
 		<div>
 			<Sort />
@@ -40,16 +58,17 @@ const Movies = props => {
 			<Pagination />
 			<hr />
 			<MoviesList 
-				movies={movies}
-            	hangleOpenModal={hangleOpenModal} />
-			<hr />
-			<Pagination />
+				movies              = {movies}
+				hangleOpenModal     = {hangleOpenModal}
+				handleMarkAsLiked   = {handleMarkAsLiked}
+				handleMarkAsBlocked = {handleMarkAsBlocked}
+				blockedList         = {blockedList} />
 			<MovieModal
-				isModalOpen={isModalOpen}
-				toggleModal={toggleModal}
-				details={movieDetails}
-				loading={movieDetailsLoading}
-				error={movieDetailsError}
+				isModalOpen         = {isModalOpen}
+				toggleModal         = {toggleModal}
+				details             = {movieDetails}
+				loading             = {movieDetailsLoading}
+				error               = {movieDetailsError}
 			/>
 		</div>
 	) : (
@@ -63,12 +82,15 @@ const mapStateToProps = state => ({
 	movieDetails        : state.movieDetails.details,
 	movieDetailsLoading : state.movieDetails.loading,
 	movieDetailsError   : state.movieDetails.error,
+	blockedList         : state.markAs.blockedList,
 })
 
 const mapDispatchToProps = dispatch =>
 	bindActionCreators({
 		fetchDefaultMovies,
-		fetchMovieDetails
+		fetchMovieDetails,
+		markAsLiked,
+		markAsBlocked
 	}, dispatch);
 
 
