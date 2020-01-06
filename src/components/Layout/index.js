@@ -1,10 +1,3 @@
-/*
-	Step 2 - 1: Router Setup: <Router /> <Switch />
-
-	Step 2 - 2: Sidebar Setup
- */
-
-
 import React from 'react';
 import {
 	BrowserRouter as Router,
@@ -15,8 +8,8 @@ import {
 
 import Home from '../Home'
 import Movies from '../Movies'
-import Liked from '../Liked'
-import Blocked from '../Blocked'
+import Liked from '../Marked/liked'
+import Blocked from '../Marked/blocked'
 
 const routes = [
 	{

@@ -67,8 +67,7 @@ const Movies = props => {
 				toggleModal         = {toggleModal}
 				details             = {movieDetails}
 				loading             = {movieDetailsLoading}
-				error               = {movieDetailsError}
-			/>
+				error               = {movieDetailsError} />
 		</div>
 	) : (
 		<div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', height: "100vh"}}>LOADING...</div>

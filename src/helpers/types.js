@@ -26,3 +26,6 @@ export const MARK_BLOCKED                = 'MARK_BLOCKED';
 export const MARK_UNDO_LIKED             = 'MARK_UNDO_LIKED';
 export const MARK_UNDO_BLOCKED           = 'MARK_UNDO_BLOCKED';
 // export const MARK_FETCH_MARKED           = 'MARK_FETCH_MARKED';
+
+// Temp Local Store
+export const LOCAL_MOVIES_DB           = 'LOCAL_MOVIES_DB';

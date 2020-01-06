@@ -2,7 +2,7 @@ import React from 'react'
 
 import Movie from './Movie'
 
-const MoviesList = React.memo(({ movies, hangleOpenModal, handleMarkAsLiked, handleMarkAsBlocked, blockedList }) => 
+const MoviesList = React.memo(({ movies, hangleOpenModal, handleMarkAsLiked, handleMarkAsBlocked }) => 
 		movies.map( movie => (
 			<div key = {movie.id}>
 				<div style={{display: 'flex', justifyContent: 'center'}}>

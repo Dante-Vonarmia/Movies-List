@@ -6,25 +6,23 @@ import { api } from "../api";
 
 
 function* requestMovies(apiMethod, args = []) {
+	// let response = yield select(state => state.localMoviesDB.db) || null;
 	let response;
 	try {
-		// if ((yield select(state => state.movies.results)).length) {
-		// 	console.log('here')
-		// 	return;
-		// }
-		// else 
-			yield put(actions.fetchMovies());
+		yield put(actions.fetchMovies());
 		response = yield call(apiMethod, ...args);
+		// yield put(actions.LocalMoviesDB(response));
 	} catch (e) {
 		yield put(actions.fetchMoviesFailure('Failed to load!'));
 		return;
 	}
 	
+
 	const { results, page, total_pages: pageCount } = response.data;
-	console.log((yield select(state=>state.movies.results)).length)
 	yield put(actions.fetchMoviesSuccess(results));
 	yield put(actions.setPageCount(pageCount));
 	yield put(actions.currentPage(page));
+	
 }
 
 function* fetchByChangePage({ payload: turnPage }) {
