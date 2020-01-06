@@ -23,4 +23,6 @@ export const CHANGE_PAGE                 = 'CHANGE_PAGE';
 // Marked Item 
 export const MARK_LIKED                  = 'MARK_LIKED';
 export const MARK_BLOCKED                = 'MARK_BLOCKED';
-export const MARK_FETCH_MARKED           = 'MARK_FETCH_MARKED';
+export const MARK_UNDO_LIKED             = 'MARK_UNDO_LIKED';
+export const MARK_UNDO_BLOCKED           = 'MARK_UNDO_BLOCKED';
+// export const MARK_FETCH_MARKED           = 'MARK_FETCH_MARKED';

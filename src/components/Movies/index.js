@@ -58,11 +58,10 @@ const Movies = props => {
 			<Pagination />
 			<hr />
 			<MoviesList 
-				movies              = {movies}
+				movies              = {movies.filter(movie => blockedList.indexOf(movie) === -1)}
 				hangleOpenModal     = {hangleOpenModal}
 				handleMarkAsLiked   = {handleMarkAsLiked}
-				handleMarkAsBlocked = {handleMarkAsBlocked}
-				blockedList         = {blockedList} />
+				handleMarkAsBlocked = {handleMarkAsBlocked} />
 			<MovieModal
 				isModalOpen         = {isModalOpen}
 				toggleModal         = {toggleModal}

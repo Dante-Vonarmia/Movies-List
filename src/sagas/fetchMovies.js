@@ -8,7 +8,12 @@ import { api } from "../api";
 function* requestMovies(apiMethod, args = []) {
 	let response;
 	try {
-		yield put(actions.fetchMovies());
+		// if ((yield select(state => state.movies.results)).length) {
+		// 	console.log('here')
+		// 	return;
+		// }
+		// else 
+			yield put(actions.fetchMovies());
 		response = yield call(apiMethod, ...args);
 	} catch (e) {
 		yield put(actions.fetchMoviesFailure('Failed to load!'));
@@ -16,7 +21,7 @@ function* requestMovies(apiMethod, args = []) {
 	}
 	
 	const { results, page, total_pages: pageCount } = response.data;
-	
+	console.log((yield select(state=>state.movies.results)).length)
 	yield put(actions.fetchMoviesSuccess(results));
 	yield put(actions.setPageCount(pageCount));
 	yield put(actions.currentPage(page));
