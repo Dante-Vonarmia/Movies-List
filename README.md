@@ -8,9 +8,9 @@ A Simple Local movies list assignment based on React, Redux, Redux-Saga, theMovi
 - [x] Sort by four different mode: by **Title**; by **Vote_Count**; by **Average_Score**; by **Release_Date**
 - [x] Pagination
 - [x] Movie details in a **modal layer**
-- [ ] Mark a movie as **"liked"**
-- [ ] Mark a movie as **"blocked"** and **NOT** be shown in the main list
-- [ ] Switch a movie's status as "liked" or "blocked"
+- [x] Mark a movie as **"liked"**
+- [x] Mark a movie as **"blocked"** and **NOT** be shown in the main list
+- [x] Switch a movie's status as "liked" or "blocked"
 - [ ] *No repetative data request*
 
 ### Install
