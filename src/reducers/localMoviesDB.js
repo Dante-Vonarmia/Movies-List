@@ -9,7 +9,7 @@ export const localMoviesDB = (state = dbInitialState, action) => {
 		case types.LOCAL_MOVIES_DB:
 			return {
 				...state,
-				db: [...state.db, action.payload]
+				db: [...state.db, ...state.db.filter(cached => cached !== action.payload)]
 			};
 		default:
 			return state;

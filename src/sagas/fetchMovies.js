@@ -11,7 +11,8 @@ function* requestMovies(apiMethod, args = []) {
 	try {
 		yield put(actions.fetchMovies());
 		response = yield call(apiMethod, ...args);
-		// yield put(actions.LocalMoviesDB(response));
+		yield put(actions.LocalMoviesDB(response));
+		console.log((yield select(state => state.localMoviesDB.db.indexOf(response))))
 	} catch (e) {
 		yield put(actions.fetchMoviesFailure('Failed to load!'));
 		return;
