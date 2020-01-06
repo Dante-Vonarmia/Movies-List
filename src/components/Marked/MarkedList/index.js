@@ -3,7 +3,7 @@ import React from 'react'
 const MarkedList = React.memo( ({movies, hangleOpenModal, undoMarkAs, handleSwitchList}) =>
 	 movies.length < 1 ? (
 		<div  style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: "100vh"}}>
-			<a href='movies'>Go Movies - List</a>.
+			<a href='movies'>Go TO: Movies - List</a>.
 		</div>
 	) : ( movies.map( movie => (
 		<div key={movie.id} style={{textAlign: 'center'}}>

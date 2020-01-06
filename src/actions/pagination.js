@@ -5,12 +5,12 @@ export const setPageCount = count => ({
 	payload : count,
 });
 
-export const currentPage = page => ({
+export const currentPage  = page => ({
 	type    : types.CURRENT_PAGE,
 	payload : page,
 });
 
-export const changePage = turnPage => ({
+export const changePage   = turnPage => ({
 	type    : types.CHANGE_PAGE,
 	payload : turnPage,
 });

@@ -21,7 +21,7 @@ const Movies = props => {
 		fetchMovieDetails,
 		markAsLiked,
 		markAsBlocked,
-		blockedList
+		blockedList,
 	} = props;
 	
 	const [isModalOpen, toggleModal] = useState(false);
@@ -50,7 +50,6 @@ const Movies = props => {
 		},
 		[markAsBlocked],
 	)
-
 	return !moviesloading ? (
 		<div>
 			<Sort />
@@ -88,7 +87,7 @@ const mapDispatchToProps = dispatch =>
 		fetchDefaultMovies,
 		fetchMovieDetails,
 		markAsLiked,
-		markAsBlocked
+		markAsBlocked,
 	}, dispatch);
 
 

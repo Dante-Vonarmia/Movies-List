@@ -21,11 +21,9 @@ export const CURRENT_PAGE                = 'CURRENT_PAGE';
 export const CHANGE_PAGE                 = 'CHANGE_PAGE';
 
 // Marked Item 
+export const FETCH_MARKED_LIST           = 'FETCH_MARKED_LIST';
 export const MARK_LIKED                  = 'MARK_LIKED';
 export const MARK_BLOCKED                = 'MARK_BLOCKED';
 export const MARK_UNDO_LIKED             = 'MARK_UNDO_LIKED';
 export const MARK_UNDO_BLOCKED           = 'MARK_UNDO_BLOCKED';
-// export const MARK_FETCH_MARKED           = 'MARK_FETCH_MARKED';
-
-// Temp Local Store
-export const LOCAL_MOVIES_DB           = 'LOCAL_MOVIES_DB';
+// export const MARK_FETCH_MARKED        = 'MARK_FETCH_MARKED';

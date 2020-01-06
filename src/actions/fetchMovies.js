@@ -4,11 +4,6 @@ export const fetchMovies = () => ({
 	type    : types.FETCH_MOVIES,
 });
 
-export const LocalMoviesDB = data => ({
-	type    : types.LOCAL_MOVIES_DB,
-	payload : data,
-});
-
 export const fetchMoviesSuccess = movies => ({
 	type    : types.FETCH_MOVIES_SUCCESS,
 	payload : movies,
