@@ -26,21 +26,21 @@ function* requestMovies(apiMethod, args = []) {
 function* fetchByChangePage({ payload: turnPage }) {
 	const sorted = yield select(state => state.sortBy);
 	const { title, voteCount, averageScore, releaseDate } = sorted;
-	if (title !== "") {
+	if (title !== "")
 		yield requestMovies(api.getMoviesByOriginalTitle, [[toggleSort(!title)], turnPage]);
-	} else if (voteCount !== "") {
+	else if (voteCount !== "")
 		yield requestMovies(api.getMoviesByVoteCount, [[toggleSort(!voteCount)], turnPage]);
-	} else if (averageScore !== "") {
+	else if (averageScore !== "")
 		yield requestMovies(api.getMoviesByVoteAverage, [[toggleSort(!averageScore)], turnPage]);
-	} else if (releaseDate !== "") {
+	else if (releaseDate !== "")
 		yield requestMovies(api.getMoviesByReleaseDate, [[toggleSort(!releaseDate)], turnPage]);
-	} else
+	else
 		yield requestMovies(api.getDefaultMovies, [turnPage]);
 }
 
 function* fetchDefaultMovies() {
 	// const filterBlocked = yield select(state => state.markAs.blockedList)
-	// console.log(filterLiked)
+	// console.log(filterBlocked)
 	// if (!filterBlocked.length)
 		yield requestMovies(api.getDefaultMovies);
 }
