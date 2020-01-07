@@ -43,7 +43,6 @@ const Movies = props => {
 		},
 		[markAsLiked],
 	)
-
 	const handleMarkAsBlocked = useCallback(
 		movie => {
 			markAsBlocked(movie)
