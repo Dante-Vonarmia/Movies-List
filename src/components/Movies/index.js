@@ -49,6 +49,7 @@ const Movies = props => {
 		},
 		[markAsBlocked],
 	)
+
 	return !moviesloading ? (
 		<div>
 			<Sort />

@@ -22,8 +22,7 @@ export default function markedList (state = markAsInitialState, action) {
 
 		case types.FETCH_MARKED_LIST:
 			return {
-				...state,
-				blockedList: action.payload
+				...state
 			};
 			
 		case types.MARK_UNDO_LIKED:

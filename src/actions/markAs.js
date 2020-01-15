@@ -1,8 +1,7 @@
 import * as types from '../helpers/types'
 
-export const fetchMarkedList   = movies => ({
-	type    : types.FETCH_MARKED_LIST,
-	payload : movies,
+export const fetchMarkedList    = () => ({
+	type    : types.FETCH_MARKED_LIST
 });
 
 export const markAsLiked        = movie => ({

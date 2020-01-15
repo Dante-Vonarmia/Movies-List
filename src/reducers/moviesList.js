@@ -14,6 +14,11 @@ export const movies = (state = moviesInitialState, action) => {
 				loading : true
 			};
 
+		case types.FETCH_DEFAULT_MOVIES: 
+			return {
+				...state
+			}
+		
 		case types.FETCH_MOVIES_SUCCESS:
 			return {
 				...state,

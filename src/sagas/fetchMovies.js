@@ -17,10 +17,11 @@ function* requestMovies(apiMethod, args = []) {
 	}
 
 	const { results, page, total_pages: pageCount } = response.data;
-
+	
 	yield put(actions.fetchMoviesSuccess(results));
 	yield put(actions.setPageCount(pageCount));
 	yield put(actions.currentPage(page));
+
 }
 
 function* fetchByChangePage({ payload: turnPage }) {
@@ -38,7 +39,7 @@ function* fetchByChangePage({ payload: turnPage }) {
 		yield requestMovies(api.getDefaultMovies, [turnPage]);
 }
 
-function* fetchDefaultMovies() {
+function* fetchMoviesByDefault() {
 	// const filterBlocked = yield select(state => state.markAs.blockedList)
 	// console.log(filterBlocked)
 	// if (!filterBlocked.length)
@@ -82,13 +83,13 @@ function toggleSort(value) {
 
 export default function* fetchMoviesListener() {
 	yield all([
-		takeLatest(types.FETCH_DEFAULT_MOVIES, fetchDefaultMovies),
-		takeLatest(types.CHANGE_PAGE, fetchByChangePage),
+		takeLatest(types.FETCH_DEFAULT_MOVIES, fetchMoviesByDefault),
+		takeLatest(types.BY_DEFAULT, fetchMoviesByDefault),
 		takeLatest(types.BY_TITLE, fetchMoviesByOriginalTitle),
 		takeLatest(types.BY_VOTECOUNT, fetchMoviesByVoteCount),
 		takeLatest(types.BY_AVERAGESCORE, fetchMoviesByVoteAverage),
 		takeLatest(types.BY_RELEASEDATE, fetchMoviesByReleaseDate),
-		takeLatest(types.BY_DEFAULT, fetchDefaultMovies),
+		takeLatest(types.CHANGE_PAGE, fetchByChangePage),
 		takeLatest(types.FETCH_MOVIE_DETAILS, fetchMovieDetails),
 	]);
 }

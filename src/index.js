@@ -11,4 +11,4 @@ import App from './components/App';
 
 const _root = document.getElementById('root')
 
-ReactDOM.render( <App /> ,_root );
+ReactDOM.render( <App />, _root );

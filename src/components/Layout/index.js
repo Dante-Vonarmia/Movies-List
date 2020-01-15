@@ -31,7 +31,7 @@ const routes = [
 	}
 ];
 
-export default function sideBar() {
+export default function layer() {
 	return (
 		<Router>
 			<div style={{ }}>
